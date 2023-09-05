@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?><odoo>
+  <data>
+
+      <record id="stock_move_line_view_search_inherited" model="ir.ui.view">
+          <field name="name">stock.move.line.view.search.inherited</field>
+          <field name="model">stock.move.line</field>
+          <field name="inherit_id" ref="stock.stock_move_line_view_search"/>
+          <field name="arch" type="xml">
+            <xpath expr="//filter[@name='by_location']" position="after">
+                 <filter string="Type" name="by_prepress_type" domain="[]" context="{'group_by': 'prepress_type'}"/>
+            </xpath>
+          </field>
+        </record>
+  </data>
+</odoo>
